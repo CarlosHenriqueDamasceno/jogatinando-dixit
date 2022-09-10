@@ -14,3 +14,9 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+
+## Descrição das regras
+
+1 - São distribuidas 6 cartas aleatórias para cada jogador.
+2 - O restante das cartas formam a pilha de compra.
+3 - Em partidas com 3 a 6 jogadores, cada jogador recebe somente 1 pino de votação, já em partidas com 7 a 12 jogadores cada jogador recebe 2 pinos de votação.
