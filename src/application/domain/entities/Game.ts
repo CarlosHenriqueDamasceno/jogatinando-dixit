@@ -4,12 +4,12 @@ import Player from "./Player";
 export default class Game{
 
     readonly players: Player[];
-    readonly gameState: number;
+    readonly gameState: gameState;
     readonly stack: Card[];
 
     constructor(
         players:Player[],
-        gameState: number,
+        gameState: gameState,
         stack: Card[]
     ){
 
@@ -19,4 +19,10 @@ export default class Game{
 
     }
 
+}
+
+enum gameState{
+    waitingForPlayers,
+    waitingForMasterCardSelection,
+    waitingFor
 }
