@@ -1,9 +1,9 @@
 export default class Card{
 
     readonly id: number;
-    readonly image: String;
+    readonly image: string;
 
-    constructor(id:number, image: String)
+    constructor(id:number, image: string)
     {
 
         this.id = id;
