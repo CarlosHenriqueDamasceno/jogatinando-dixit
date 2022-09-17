@@ -3,16 +3,13 @@ import Card from "../entities/Card";
 import Room, { gameState } from "../entities/Room";
 import Round from "../entities/Round";
 import CardRepositoryInterface from "../repositories/CardRepositoryInterface";
-import RoomRepositoryInterface from "../repositories/RoomRepositoryInterface";
 
 export default class InitRoomUseCase {
 
     private cardRepository: CardRepositoryInterface;
-    private roomRepository: RoomRepositoryInterface;
 
-    constructor(roomRepository: RoomRepositoryInterface, cardRepository: CardRepositoryInterface){
+    constructor(cardRepository: CardRepositoryInterface){
         this.cardRepository = cardRepository;
-        this.roomRepository = roomRepository;
     }
 
     public execute(room: Room) : Room
