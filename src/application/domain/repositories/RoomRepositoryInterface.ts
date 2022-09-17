@@ -1,7 +1,7 @@
-import Room from "../entities/Room";
+import { GameStatus } from "../../types/GameStatus"
 
 export default interface RoomRepositoryInterface{
 
-    get():Room
+    updateStatus(roomId:string, status:GameStatus) : void
 
 }

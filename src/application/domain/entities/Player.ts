@@ -3,13 +3,13 @@ import Card from "./Card";
 export default class Player{
 
     nick: string;
-    id: number;
+    id: string;
     score: number;
     color: string;
     deck: Card[];
 
     constructor(
-        id: number,
+        id: string,
         nick: string,
         color: string,
         score:number,

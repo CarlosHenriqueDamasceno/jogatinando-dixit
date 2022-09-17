@@ -1,6 +1,6 @@
 import { shuffleArray } from "../../../utils/array_manipulation";
 import Card from "../entities/Card";
-import Room, { gameState } from "../entities/Room";
+import Room, { Status } from "../entities/Room";
 import Round from "../entities/Round";
 import CardRepositoryInterface from "../repositories/CardRepositoryInterface";
 
@@ -21,9 +21,9 @@ export default class InitRoomUseCase {
 
         this.sortPlayers(room);
 
-        room.round = new Round(0, [], null);
+        room.round = new Round(0, [], null, null);
 
-        room.gameState = gameState.waitingForMasterCardSelection;
+        room.status = Status.waitingForMasterCardSelection;
 
         return room;
     }

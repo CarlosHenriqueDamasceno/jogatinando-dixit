@@ -1,18 +1,24 @@
-import Card from "./Card";
+import { ObjectKeyValue } from "../../types/ObjectKeyValue";
 
 export default class Round{
 
-    readonly master: number;
-    readonly tip: string | null;
-    readonly selectedCards: Card[];
+    masterId: string;
+    tip: string | null;
+    selectedCards: ObjectKeyValue;
 
     constructor(
-        master: number,
-        selectedCards: Card[],
-        tip: string | null,
+        masterId: string,
+        selectedCards: ObjectKeyValue,
+        tip: string | null
     ){
-        this.master        = master;
+        this.masterId      = masterId;
         this.selectedCards = selectedCards;
         this.tip           = tip;
+    }
+
+    get mastersCard(){
+
+        return this.selectedCards[this.masterId]
+
     }
 }
