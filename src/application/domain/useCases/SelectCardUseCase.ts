@@ -36,7 +36,7 @@ export default class SendTipUseCase {
     private validation(player: Player, cardId: string)
     {
 
-        let playerOwnsThisCard = player.deck.find((e) => e.id == cardId);
+        let playerOwnsThisCard = player.deck.find((e) => e == cardId);
 
         if(playerOwnsThisCard){
 

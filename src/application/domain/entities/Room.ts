@@ -10,6 +10,7 @@ export default class Room{
     stack: Array<string>;
     ownerId: number;
     round: Round;
+    playersOrder: Array<string>;
 
     constructor(
         id: string,
@@ -17,15 +18,17 @@ export default class Room{
         status: GameStatus,
         stack: Array<string>,
         ownerId: number,
-        round: Round
+        round: Round,
+        playersOrder: Array<string>
     ){
 
-        this.id       = id;
-        this.players  = players;
-        this.status   = status;
-        this.stack    = stack;
-        this.ownerId = ownerId;
-        this.round    = round;
+        this.id           = id;
+        this.players      = players;
+        this.status       = status;
+        this.stack        = stack;
+        this.ownerId      = ownerId;
+        this.round        = round;
+        this.playersOrder = playersOrder;
 
     }
 

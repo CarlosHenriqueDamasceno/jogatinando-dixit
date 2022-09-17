@@ -6,14 +6,14 @@ export default class Player{
     id: string;
     score: number;
     color: string;
-    deck: Card[];
+    deck: Array<string>;
 
     constructor(
         id: string,
         nick: string,
         color: string,
         score:number,
-        deck: Card[],
+        deck: Array<string>,
     ){
         this.id    = id;
         this.nick  = nick;
