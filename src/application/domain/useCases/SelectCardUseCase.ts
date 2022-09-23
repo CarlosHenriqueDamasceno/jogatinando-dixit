@@ -21,9 +21,15 @@ export default class SendTipUseCase {
         cardId:string
     ){
 
+        let player =  room.players[userId];
+
+        this.validation(player, cardId);
+
         room.round.selectedCards[userId] = cardId;
 
-        if(Object.keys(room.players).length == Object.keys(room.round.selectedCards).length){
+        let isTheLastPlayerSelectingCard = Object.keys(room.players).length == Object.keys(room.round.selectedCards).length;
+
+        if(isTheLastPlayerSelectingCard){
 
             room.status = GameStatus.waitingForPlayersVoting;
             this.roomRepository.updateStatus(room.id, room.status);
