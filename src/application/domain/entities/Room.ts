@@ -4,7 +4,7 @@ import Round from "./Round";
 
 export default class Room{
 
-    id: string;
+    id: string | null;
     players: PlayersMap;
     status: GameStatus;
     stack: Array<string>;
@@ -13,7 +13,7 @@ export default class Room{
     playersOrder: Array<string>;
 
     constructor(
-        id: string,
+        id: string | null,
         players:PlayersMap,
         status: GameStatus,
         stack: Array<string>,
